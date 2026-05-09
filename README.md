@@ -9,3 +9,18 @@ Python 3.8+
 PyTorch 1.12.0+
 NumPy, Scikit-learn, SciPy, Matplotlib
 CUDA 11.3+ (Recommended)
+# Dataset Preparation
+The model is evaluated on the MER and REFED datasets.
+
+Pre-process raw physiological signals (EEG, GSR, PPG, fNIRS) into .pkl files.
+
+Organize the data directory as follows:
+data/
+├── MER/
+│   ├── subject_01.pkl
+│   └── ...
+└── REFED/
+    ├── subject_01.pkl
+    └── ...
+# Training & Validation
+We use a strict Subject-Independent 10-fold Cross-validation protocol to ensure the model's generalization capability.
